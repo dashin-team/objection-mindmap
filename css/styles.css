@@ -397,11 +397,109 @@ mark { background: #ffe08a; color: inherit; padding: 0 0.1em; border-radius: 4px
 
 .qcard .ask {
   margin-top: 8px;
-  font-size: 1.28rem;
-  line-height: 1.55;
+  font-size: 1.45rem;
+  line-height: 1.5;
   font-family: var(--serif);
   overflow-wrap: break-word;
 }
+
+.dim-tag {
+  display: inline-block;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--dim, var(--seal));
+}
+
+#closing { background: #f3faf6; border-color: #9fc9b8; }
+
+.home-title { margin-top: 8px; }
+
+.search.big { margin-top: 4px; }
+.search.big input { min-height: 64px; font-size: 1.15rem; }
+
+.bank-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 84px;
+  margin-top: 12px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.bank-btn .count { font-family: var(--sans); font-size: 1.45rem; color: var(--muted); }
+.bank-btn[data-bank="insurance"] { border-top: 5px solid var(--seal); }
+.bank-btn[data-bank="finance"] { border-top: 5px solid #8a5a10; }
+.bank-btn[data-bank="advanced"] { border-top: 5px solid #1f4e78; }
+
+.menu-row {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin: 28px 0 8px;
+}
+.menu-row a {
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.plain-link {
+  display: block;
+  padding: 14px 2px;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.obj-title { font-size: 1.45rem; }
+
+.opening.subtle { margin: 0 0 8px; }
+.opening.subtle summary {
+  border: 0;
+  background: transparent;
+  min-height: 36px;
+  padding: 0;
+  justify-content: flex-start;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.opening.subtle summary::after { display: none; }
+
+.step-back {
+  width: 100%;
+  margin-top: 16px;
+  background: transparent;
+}
+
+.follow { display: block; margin-top: 6px; color: var(--muted); font-size: 1rem; }
 
 .qcard.bridge { background: var(--paper); border-color: var(--line); }
 
@@ -434,9 +532,10 @@ mark { background: #ffe08a; color: inherit; padding: 0 0.1em; border-radius: 4px
 .reply {
   width: 100%;
   text-align: left;
-  padding: 12px 14px;
-  border-left: 6px solid var(--dim, var(--line));
+  padding: 16px 14px;
   background: var(--paper);
+  font-size: 1.12rem;
+  line-height: 1.45;
 }
 
 .reply .who { display: block; color: var(--muted); font-size: 0.92rem; font-weight: 700; }
@@ -451,7 +550,13 @@ mark { background: #ffe08a; color: inherit; padding: 0 0.1em; border-radius: 4px
 
 .closing-block h2 { margin-bottom: 8px; }
 
-.next-step { margin-top: 10px; background: #fff7f2; border-color: #efd0c4; }
+.next-step {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #fff7f2;
+  border: 1px solid #efd0c4;
+}
 
 .tracker { margin-top: 22px; }
 

@@ -33,7 +33,8 @@ export function parseRoute(hash) {
   const raw = decodeURIComponent(String(hash || "").replace(/^#/, ""));
   const parts = raw.split("/").filter(Boolean);
   if (parts.length === 0) return { name: "home" };
-  if (parts[0] === "frameworks") return { name: "home", scroll: "frameworks" };
+  if (parts[0] === "frameworks" || parts[0] === "library") return { name: "library" };
+  if (parts[0] === "b" && parts[1]) return { name: "bank", id: parts[1] };
   if (parts[0] === "o" && parts[1]) {
     const rest = parts.slice(2);
     const path = [];
@@ -63,9 +64,9 @@ export function parseRoute(hash) {
 }
 
 export function routeToHash(route) {
-  if (!route || route.name === "home") {
-    return route && route.scroll === "frameworks" ? "#/frameworks" : "#/";
-  }
+  if (!route || route.name === "home") return "#/";
+  if (route.name === "library") return "#/library";
+  if (route.name === "bank" && route.id) return `#/b/${route.id}`;
   if (route.name === "submit") {
     if (route.kind === "new") return "#/submit/new";
     if (route.kind === "branch") {

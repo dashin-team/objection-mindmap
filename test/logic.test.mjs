@@ -62,7 +62,9 @@ assert.equal(route.mode, "closing");
 assert.equal(route.reply, 1);
 assert.equal(routeToHash(route), "#/o/fin-003/1/0/closing/1");
 assert.equal(parseRoute("#/submit/branch/adv-010/0").kind, "branch");
-assert.deepEqual(parseRoute("#/frameworks"), { name: "home", scroll: "frameworks" });
+assert.deepEqual(parseRoute("#/frameworks"), { name: "library" });
+assert.equal(parseRoute("#/b/finance").id, "finance");
+assert.equal(routeToHash({ name: "bank", id: "insurance" }), "#/b/insurance");
 
 assert.equal(isApproved({ approved: true }), true);
 assert.equal(isApproved({ approved: "TRUE" }), true);
