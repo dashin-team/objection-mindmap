@@ -104,6 +104,12 @@ node test/logic.test.mjs
 
 ## 發布
 
-這個網站是靜態檔，不用建置。GitHub Pages 從 `main` 的根目錄提供檔案，網址是 `https://dashin-team.github.io/objection-mindmap/`。
+這個網站是靜態檔，不用建置。檔案在 `main` 的根目錄。倉庫裡的 `.nojekyll` 是為了讓 Pages 不要用 Jekyll 處理這些檔案。
 
-倉庫裡的 `.nojekyll` 是為了讓 Pages 不要用 Jekyll 處理這些檔案。
+到 GitHub 倉庫的 **Settings → Pages**：
+
+1. Source 選 **Deploy from a branch**。
+2. Branch 選 `main`，資料夾選 `/ (root)`。
+3. 按 Save。
+
+約一分鐘後打開 <https://dashin-team.github.io/objection-mindmap/>。若還是 404，再等一下重新整理。
